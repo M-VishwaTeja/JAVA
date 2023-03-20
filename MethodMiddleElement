@@ -1,0 +1,32 @@
+// 3. Write a Java method to display the middle character of a string. Go to the editor
+// Note: a) If the length of the string is odd there will be two middle characters.
+// b) If the length of the string is even there will be one middle character.
+// Test Data:
+// Input a string: 350
+// Expected Output:
+// The middle character in the string: 5
+
+import java.util.*;
+class middleelement{
+    void element(String a){
+        int position;
+        int length;
+        if(a.length()%2 == 0){
+            //System.out.println(a.charAt(c));
+            position= a.length()/2 -1;
+            length=2;
+        }
+        else{
+            //System.out.println(a.charAt(c));
+            position= a.length()/2;
+            length=1;
+        }
+        System.out.println("Required middle character: "+a.substring(position,position+length));
+    }
+    public static void main(String Args[]){
+        middleelement obj=new middleelement();
+        Scanner in = new Scanner(System.in);
+        String a=in.next();
+        obj.element(a);
+    }
+}
