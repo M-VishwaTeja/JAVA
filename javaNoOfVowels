@@ -1,0 +1,35 @@
+// 4. Write a Java method to count all vowels in a string. Go to the editor
+// Test Data:
+// Input the string: w3resource
+// Expected Output:
+
+// Number of  Vowels in the string: 4
+
+import java.util.*;
+class vowels{
+    int count;
+    int readvowels(String x){
+        for(int i=0;i<(x.length());i++){
+            if(x.charAt(i)=='a' || x.charAt(i)=='e' || x.charAt(i)=='i' || x.charAt(i)=='o' || x.charAt(i)=='u' || x.charAt(i)=='A' || x.charAt(i)=='E' || x.charAt(i)=='I' || x.charAt(i)=='O' || x.charAt(i)=='U'){
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter string: ");
+        String a=in.nextLine();
+        vowels obj=new vowels();
+        System.out.println("Number of vowels: "+obj.readvowels(a));
+    }
+}
+//output 1
+// Enter string: 
+// uoiea
+// Number of vowels: 5
+//output 2
+// Enter string: 
+// java PROGRAMMING
+// Number of vowels: 5
